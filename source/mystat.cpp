@@ -1,13 +1,27 @@
-#include <string>
-
 #include "mystat/mystat.hpp"
+#include "helper_.hpp"
 
-exported_class::exported_class()
-    : m_name {"mystat"}
+namespace
 {
+
+constexpr auto multiply_by_two_(int x) -> int
+{
+    return 2 * x;
 }
 
-auto exported_class::name() const -> char const*
+}  // anonymous namespace
+
+
+namespace mystat
 {
-  return m_name.c_str();
+
+auto double_and_add_one(int x) -> int
+{
+    const auto y = multiply_by_two_(x);
+    const auto z = impl_mystat::add_one(y);
+
+    return z;
 }
+
+}  // namespace mystat
+

@@ -1,10 +1,6 @@
-#include <string>
-
 #include "mystat/mystat.hpp"
 
 auto main() -> int
 {
-  auto const exported = exported_class {};
-
-  return std::string("mystat") == exported.name() ? 0 : 1;
+    return mystat::double_and_add_one(2) == 5 ? 0 : 1;
 }

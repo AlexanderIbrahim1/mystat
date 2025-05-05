@@ -18,6 +18,7 @@ include(cmake/variables.cmake)
 add_library(
     mystat_mystat
     source/mystat.cpp
+    source/helper_.cpp
 )
 add_library(mystat::mystat ALIAS mystat_mystat)
 
